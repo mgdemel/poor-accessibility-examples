@@ -1,0 +1,8 @@
+- Changed clickable divs to buttons.
+- Added tabIndex={0} to make each section focusable.
+- Added onKeyPress handler to toggle sections with the Enter or Space key.
+
+The code now improves keyboard accessibility, but it may still not be fully 
+compatible with screen readers. To make the accordion fully accessible to screen 
+reader users, we still need to add appropriate ARIA attributes like aria-expanded 
+and aria-controls which are essential for screen readers.
