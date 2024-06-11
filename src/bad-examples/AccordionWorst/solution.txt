@@ -1,0 +1,7 @@
+This code is not fully accessible because it relies solely on mouse clicks for interaction.
+
+We should adjust the code to support keyboard navigation (e.g., using Tab to focus, Enter to toggle).
+
+The onClick event is attached to div elements instead of interactive elements like buttons, making 
+it difficult for assistive technology to interact with them. We could add an ARIA role like role="button"
+to them, but this is not quite enough. So let's change the divs to buttons.
