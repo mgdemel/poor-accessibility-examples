@@ -10,6 +10,7 @@ export const AccordionPass = () => {
 
   const handleKeyDown = (e: React.KeyboardEvent, index: number) => {
     if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
       toggleAccordion(index);
     }
   };

@@ -9,7 +9,8 @@ export const AccordionOkish = () => {
   };
 
   const handleKeyDown = (e: React.KeyboardEvent, index: number) => {
-    if (e.key === "Enter" || e.key === " ") {
+    if (e.code === "Enter" || e.code === "Space") {
+      e.preventDefault();
       toggleAccordion(index);
     }
   };
