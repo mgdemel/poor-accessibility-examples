@@ -1,5 +1,3 @@
-// import { AccordionWorst } from "@/bad-examples";
-// import { AccordionWorst, AccordionOkish } from "@/bad-examples";
 import {
   AccordionWorst,
   AccordionOkish,
