@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { ArrowIcon } from "../Icon";
 
 export const AccordionPass = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -21,10 +22,12 @@ export const AccordionPass = () => {
         <button
           aria-controls="section1-content"
           aria-expanded={openIndex === 0 ? "true" : "false"}
+          className="flex flex-row"
           onClick={() => toggleAccordion(0)}
           onKeyDown={(e) => handleKeyDown(e, 0)}
         >
           <h3>Section 1</h3>
+          <ArrowIcon isOpen={openIndex === 0} />
         </button>
         {openIndex === 0 && (
           <div id="section1-content">
@@ -36,10 +39,12 @@ export const AccordionPass = () => {
         <button
           aria-controls="section2-content"
           aria-expanded={openIndex === 1 ? "true" : "false"}
+          className="flex flex-row"
           onClick={() => toggleAccordion(1)}
           onKeyDown={(e) => handleKeyDown(e, 1)}
         >
           <h3>Section 2</h3>
+          <ArrowIcon isOpen={openIndex === 1} />
         </button>
         {openIndex === 1 && (
           <div id="section2-content">
@@ -51,10 +56,12 @@ export const AccordionPass = () => {
         <button
           aria-controls="section3-content"
           aria-expanded={openIndex === 2 ? "true" : "false"}
+          className="flex flex-row"
           onClick={() => toggleAccordion(2)}
           onKeyDown={(e) => handleKeyDown(e, 2)}
         >
           <h3>Section 3</h3>
+          <ArrowIcon isOpen={openIndex === 2} />
         </button>
         {openIndex === 2 && (
           <div id="section3-content">
