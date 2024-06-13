@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { ArrowIcon } from "../Icon";
+import { ArrowIcon } from "../ArrowIcon";
 
 export const AccordionWorst = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);

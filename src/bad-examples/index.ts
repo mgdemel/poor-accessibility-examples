@@ -1,5 +1,5 @@
 export { AccordionWorst } from "./AccordionWorst";
 export { AccordionOkish } from "./AccordionOkish";
 export { AccordionPass } from "./AccordionPass";
-export { ArrowIcon } from "./Icon";
+export { ArrowIcon } from "./ArrowIcon";
 export { RadixAccordion } from "./RadixAccordion";
