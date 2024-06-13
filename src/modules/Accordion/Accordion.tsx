@@ -1,31 +1,40 @@
-"use client";
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import * as RadixAccordion from "@radix-ui/react-accordion";
 import { ArrowIcon } from "@/bad-examples";
 
 type Props = {
-  isOpen: boolean;
+  id: string;
   trigger: React.ReactNode;
   content: React.ReactNode;
 };
 
-export const Accordion = ({ isOpen, trigger, content }: Props) => {
+export const Accordion = ({ id, trigger, content }: Props) => {
+  const item = useRef<HTMLDivElement>(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (item.current !== null) {
+      console.log(item.current);
+      item.current.getAttribute("data-state") === "open"
+        ? setIsOpen(true)
+        : setIsOpen(false);
+    }
+  }, [isOpen]);
+
   return (
-    <RadixAccordion.Root
-      className=""
-      type="single"
-      defaultValue="item-1"
-      collapsible
-    >
-      <RadixAccordion.Item className="py-2 w-full" value="item-1">
-        <RadixAccordion.Trigger className="flex">
-          {trigger}
-          <ArrowIcon isOpen={isOpen} />
-        </RadixAccordion.Trigger>
-        <RadixAccordion.Content className="py-2 overflow-hidden transition-all duration-300 ease-in-out">
-          {content}
-        </RadixAccordion.Content>
-      </RadixAccordion.Item>
-    </RadixAccordion.Root>
+    <RadixAccordion.Item className="py-2 w-full" value={id} ref={item}>
+      <RadixAccordion.Trigger
+        className="flex"
+        onClick={() => {
+          setIsOpen(!isOpen);
+        }}
+      >
+        {trigger}
+        <ArrowIcon isOpen={isOpen} />
+      </RadixAccordion.Trigger>
+      <RadixAccordion.Content className="py-2 overflow-hidden transition-all duration-300 ease-in-out">
+        {content}
+      </RadixAccordion.Content>
+    </RadixAccordion.Item>
   );
 };
