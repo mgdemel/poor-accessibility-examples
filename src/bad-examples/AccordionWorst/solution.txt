@@ -4,4 +4,7 @@ We should adjust the code to support keyboard navigation (e.g., using Tab to foc
 
 The onClick event is attached to div elements instead of interactive elements like buttons, making 
 it difficult for assistive technology to interact with them. We could add an ARIA role like role="button"
-to them, but this is not quite enough. So let's change the divs to buttons.
+to them, but in some cases, this is not quite enough. Also, it might be a pain to maintain role="button" 
+divs because you have to manually implement all the accessibility that comes built-in to the <button> tag.
+
+So let's change the divs to buttons.
