@@ -9,13 +9,6 @@ export const AccordionPass = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent, index: number) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      toggleAccordion(index);
-    }
-  };
-
   return (
     <div className="flex flex-col">
       <div className="">
@@ -24,7 +17,6 @@ export const AccordionPass = () => {
           aria-expanded={openIndex === 0 ? "true" : "false"}
           className="flex flex-row"
           onClick={() => toggleAccordion(0)}
-          onKeyDown={(e) => handleKeyDown(e, 0)}
         >
           <h3 className="font-bold">Section 1</h3>
           <ArrowIcon isOpen={openIndex === 0} />
@@ -41,7 +33,6 @@ export const AccordionPass = () => {
           aria-expanded={openIndex === 1 ? "true" : "false"}
           className="flex flex-row"
           onClick={() => toggleAccordion(1)}
-          onKeyDown={(e) => handleKeyDown(e, 1)}
         >
           <h3 className="font-bold">Section 2</h3>
           <ArrowIcon isOpen={openIndex === 1} />
@@ -58,7 +49,6 @@ export const AccordionPass = () => {
           aria-expanded={openIndex === 2 ? "true" : "false"}
           className="flex flex-row"
           onClick={() => toggleAccordion(2)}
-          onKeyDown={(e) => handleKeyDown(e, 2)}
         >
           <h3 className="font-bold">Section 3</h3>
           <ArrowIcon isOpen={openIndex === 2} />

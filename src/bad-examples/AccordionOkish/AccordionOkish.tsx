@@ -9,13 +9,6 @@ export const AccordionOkish = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent, index: number) => {
-    if (e.code === "Enter" || e.code === "Space") {
-      e.preventDefault();
-      toggleAccordion(index);
-    }
-  };
-
   return (
     <div className="flex flex-col">
       <div>
@@ -23,7 +16,7 @@ export const AccordionOkish = () => {
           className="flex flex-row"
           tabIndex={0}
           onClick={() => toggleAccordion(0)}
-          onKeyDown={(e) => handleKeyDown(e, 0)}
+          // onKeyDown={(e) => handleKeyDown(e, 0)}
         >
           <h3 className="font-bold">Section 1</h3>
           <ArrowIcon isOpen={openIndex === 0} />
@@ -35,7 +28,6 @@ export const AccordionOkish = () => {
           className="flex flex-row"
           tabIndex={0}
           onClick={() => toggleAccordion(1)}
-          onKeyDown={(e) => handleKeyDown(e, 1)}
         >
           <h3 className="font-bold">Section 2</h3>
           <ArrowIcon isOpen={openIndex === 1} />
@@ -47,7 +39,6 @@ export const AccordionOkish = () => {
           className="flex flex-row"
           tabIndex={0}
           onClick={() => toggleAccordion(2)}
-          onKeyDown={(e) => handleKeyDown(e, 2)}
         >
           <h3 className="font-bold">Section 3</h3>
           <ArrowIcon isOpen={openIndex === 2} />
