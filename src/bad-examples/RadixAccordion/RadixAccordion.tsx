@@ -13,7 +13,7 @@ export const RadixAccordion = () => {
   return (
     <div>
       <RAccordion.Root type="single" collapsible>
-        <RAccordion.Item className="py-2 w-full" value={"item-1"}>
+        <RAccordion.Item className="py-2 w-full" value="item-1">
           <RAccordion.Header className="font-bold">
             <RAccordion.Trigger
               className="flex"
@@ -27,7 +27,7 @@ export const RadixAccordion = () => {
             <p>Content for section 1</p>
           </RAccordion.Content>
         </RAccordion.Item>
-        <RAccordion.Item className="py-2 w-full" value={"item-2"}>
+        <RAccordion.Item className="py-2 w-full" value="item-2">
           <RAccordion.Header className="font-bold">
             <RAccordion.Trigger
               className="flex"
@@ -41,7 +41,7 @@ export const RadixAccordion = () => {
             <p>Content for section 2</p>
           </RAccordion.Content>
         </RAccordion.Item>
-        <RAccordion.Item className="py-2 w-full" value={"item-3"}>
+        <RAccordion.Item className="py-2 w-full" value="item-3">
           <RAccordion.Header className="font-bold">
             <RAccordion.Trigger
               className="flex"

@@ -11,12 +11,7 @@ type Props = {
 
 export const Accordion = ({ isOpen, trigger, content }: Props) => {
   return (
-    <RadixAccordion.Root
-      className=""
-      type="single"
-      defaultValue="item-1"
-      collapsible
-    >
+    <RadixAccordion.Root type="single" defaultValue="item-1" collapsible>
       <RadixAccordion.Item className="py-2 w-full" value="item-1">
         <RadixAccordion.Header className="py-2 font-semibold">
           <RadixAccordion.Trigger className="flex">
